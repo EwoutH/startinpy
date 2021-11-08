@@ -7,10 +7,6 @@ on:
 
 jobs:
   macOS:
-    env:
-      DEVELOPER_DIR: /Applications/Xcode.app/Contents/Developer
-      SDKROOT: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
-
     runs-on: macos-latest
     strategy:
       max-parallel: 4
