@@ -33,7 +33,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install aarch64-apple-darwin toolchain
-      uses: actions-rs/toolchain@v2
+      uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
         target: aarch64-apple-darwin
