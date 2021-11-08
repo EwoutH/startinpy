@@ -44,7 +44,7 @@ jobs:
         pip install maturin
     - name: Do the work mate
       run: |
-        maturin publish -i python --no-sdist -u hledoux -p ${{ secrets.PASSWORD_PYPI }}
+        maturin publish -i python --no-sdist --universal2 -u hledoux -p ${{ secrets.PASSWORD_PYPI }}
 
   Linux:
     runs-on: ubuntu-latest
