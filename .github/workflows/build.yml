@@ -44,5 +44,6 @@ jobs:
       uses: messense/maturin-action@v1
       with:
         maturin-version: latest
+        manylinux: auto
         command: build
         args: --release -i python --no-sdist --universal2
