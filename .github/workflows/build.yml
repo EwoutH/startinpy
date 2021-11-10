@@ -35,8 +35,14 @@ jobs:
         toolchain: stable
         target: aarch64-apple-darwin
     - if: matrix.os != 'macos'
-      name: Do the work mate
-      run: maturin build --release -i python --no-sdist
+      uses: messense/maturin-action@v1
+      with:
+        maturin-version: latest
+        command: build
+        args: --release -i python --no-sdist
     - if: matrix.os == 'macos'
-      name: Do the work mate (macOS)
-      run: maturin build --release -i python --no-sdist --universal2
+      uses: messense/maturin-action@v1
+      with:
+        maturin-version: latest
+        command: build
+        args: --release -i python --no-sdist --universal2
