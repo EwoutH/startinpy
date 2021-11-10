@@ -1,4 +1,4 @@
-name: Build Python bindings
+name: Publish Python bindings
 
 on:
  release:
