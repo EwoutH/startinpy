@@ -36,10 +36,10 @@ jobs:
         maturin-version: latest
         command: build
         manylinux: auto
-        args: --release -i python --no-sdist
+        args: --release --no-sdist
     - if: matrix.os == 'macos'
       uses: messense/maturin-action@v1
       with:
         maturin-version: latest
         command: build
-        args: --release -i python --no-sdist --universal2
+        args: --release --no-sdist --universal2
